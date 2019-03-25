@@ -1,0 +1,31 @@
+<!-- <p>
+  prueba works!
+  {{test}}
+</p> -->
+<!-- <p>{{test}}</p>
+
+<p>{{test}}</p>
+
+<p>{{test}}</p> -->
+
+<div class="" *ngFor="let movie of movies">
+  <!-- <a [routerLink]="['/pelicula/{{movie.url}}']">{{movie.title}}</a> -->
+  <a href="/pelicula/{{movie.title}}"> {{movie.title}}</a>
+  <button type="button" name="boton_1">
+    Ver + info
+  </button>
+  <p>Fecha de lanzamiento:{{movie.release_date}}</p>
+  <p>Director:{{movie.director}}</p>
+  <p>Productores:{{movie.producer}}</p>
+  <p>Número de episodio:{{movie.episode_id}}</p>
+
+  <!-- <p>{{movie.opening_crawl}}</p> -->
+
+  <p>---------------------------- </p>
+</div>
+
+<!-- <a href="/person/{{people[0].name}}"> {{people[0].name}}</a> -->
+<div class="" *ngIf="people">
+  {{people[0].name}}
+  <a href="/persona/{{people[0].name}}"> {{people[0].name}}</a>
+</div>
