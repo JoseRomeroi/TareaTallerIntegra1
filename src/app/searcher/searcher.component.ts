@@ -1,16 +1,18 @@
 import { Component, OnInit } from '@angular/core';
-import {HttpClient} from '@angular/common/http'
+import {HttpClient} from '@angular/common/http';
 
 @Component({
-  selector: 'app-prueba',
-  templateUrl: './prueba.component.html',
-  styleUrls: ['./prueba.component.css']
+  selector: 'app-searcher',
+  templateUrl: './searcher.component.html',
+  styleUrls: ['./searcher.component.css']
 })
-export class PruebaComponent implements OnInit {
+export class SearcherComponent implements OnInit {
   public movies = [];
   public people = [];
   public planets = [];
   public starships = [];
+  dataset = ['MDB', 'Angular', 'Bootstrap', 'Framework', 'SPA', 'React', 'Vue'];
+  searchText = 'A';
 
   constructor(private http: HttpClient) { }
 
@@ -66,5 +68,4 @@ export class PruebaComponent implements OnInit {
       console.log(this.starships);
     }
   }
-
 }

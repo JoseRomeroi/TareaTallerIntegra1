@@ -1,5 +1,23 @@
 <p>
   pelicula works!
 </p>
-{{id}}
-{{selected_movie.title}}
+
+
+
+<p>nombre: {{selected_movie.title}}</p>
+<p>director: {{selected_movie.director}}</p>
+<p>------ personajes--------</p>
+<div class="" *ngFor="let charact of selected_movie.characters">
+
+  <a href="/persona/{{charact.name}}">  {{charact.name}}</a>
+</div>
+<p>------ planetas--------</p>
+<div class="" *ngFor="let planet of selected_movie.planets">
+  {{planet.name}}
+  <!-- <a href="/persona/charact.name">  {{charact.name}}</a> -->
+</div>
+<p>------ naves espacioales--------</p>
+<div class="" *ngFor="let naves of selected_movie.starships">
+  {{naves.name}}
+  <!-- <a href="/persona/charact.name">  {{charact.name}}</a> -->
+</div>

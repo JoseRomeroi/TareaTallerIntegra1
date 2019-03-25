@@ -24,8 +24,13 @@
   <p>---------------------------- </p>
 </div>
 
-<!-- <a href="/person/{{people[0].name}}"> {{people[0].name}}</a> -->
-<div class="" *ngIf="people">
-  {{people[0].name}}
-  <a href="/persona/{{people[0].name}}"> {{people[0].name}}</a>
+<p>---------------------------- </p>
+<p>personas</p>
+<p>---------------------------- </p>
+
+<div class="" *ngFor="let p of people">
+  <p>{{p.name}}</p>
+  <p>{{p.mass}}</p>
 </div>
+  <!-- {{people[0].mass}} -->
+  <!-- <a href="/persona/{{people[0].name}}"> {{people[0].name}}</a> -->

@@ -7,18 +7,27 @@ import { PruebaComponent } from './prueba/prueba.component';
 import { HttpClientModule } from '@angular/common/http';
 import { PeliculaComponent } from './pelicula/pelicula.component';
 import { PersonaComponent } from './persona/persona.component';
+import { SearcherComponent } from './searcher/searcher.component';
+import {MatCheckboxModule} from '@angular/material/checkbox';
+import { FilterPipe } from './filter.pipe';
+import {MatInputModule} from '@angular/material/input';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     PruebaComponent,
     PeliculaComponent,
-    PersonaComponent
+    PersonaComponent,
+    SearcherComponent,
+    FilterPipe,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    MatCheckboxModule,
+    MatInputModule
   ],
   providers: [],
   bootstrap: [AppComponent]
