@@ -1,11 +1,24 @@
 
 <section class="example-section">
-  <mat-checkbox class="example-margin" >Peliculas</mat-checkbox>
-  <mat-checkbox class="example-margin" >Planetas</mat-checkbox>
-  <mat-checkbox class="example-margin" >Naves</mat-checkbox>
-  <mat-checkbox class="example-margin" >Personajes</mat-checkbox>
+  <div class="" (click)="setSearch(1)">
+    <mat-checkbox class="example-margin">Personajes</mat-checkbox>
+  </div>
+  <div class="" (click)="setSearch(2)">
+    <mat-checkbox class="example-margin">Naves</mat-checkbox>
+  </div>
+  <div class="" (click)="setSearch(3)">
+    <mat-checkbox class="example-margin">Planetas</mat-checkbox>
+  </div>
+  <div class="" (click)="setSearch(4)">
+    <mat-checkbox class="example-margin">Peliculas</mat-checkbox>
+  </div>
 </section>
-<!-- <form class="example-form">
+
+<ul *ngFor="let data of dataset | filter: searchText">
+  <li>{{data}}</li>
+</ul>
+<!-- 
+<form class="example-form">
   <mat-form-field class="example-full-width">
     <input matInput placeholder="Favorite food" value="Sushi">
   </mat-form-field>
@@ -14,6 +27,3 @@
     <textarea matInput placeholder="Leave a comment"></textarea>
   </mat-form-field>
 </form> -->
-<ul *ngFor="let data of dataset | filter: searchText">
-  <li>{{data}}</li>
-</ul>
