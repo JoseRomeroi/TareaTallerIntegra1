@@ -1,8 +1,22 @@
-<p>
-  persona works!
-</p>
-<p>{{selected_people.mass}}</p>
-<p>{{selected_people.name}}</p>
-<p>{{selected_people}}</p>
-<p>{{selected_people}}</p>
-<p>{{selected_people}}</p>
+<h1>Nombre: {{selected_people.name}}</h1>
+<p>Año de nacimiento: {{selected_people.birth_year}}</p>
+<p>Color de ojos: {{selected_people.eye_color}}</p>
+<p>Genero: {{selected_people.gender}}</p>
+<p>Color de Pelo: {{selected_people.hair_color}}</p>
+<p>Altura: {{selected_people.height}}</p>
+<p>Masa: {{selected_people.mass}}</p>
+<p>Color de Piel: {{selected_people.skin_color}}</p>
+<p>Creado: {{selected_people.created}}</p>
+<p>Editado: {{selected_people.edited}}</p>
+
+<p>Planeta al que pertenece: {{selected_people.homeworld}}</p>
+
+<p>----- Peliculas en las que aparece -----</p>
+<div class="" *ngFor="let fil of selected_people.films">
+  <a href="/pelicula/{{fil.title}}">  {{fil.title}}</a>
+</div>
+
+<p>------ Naves espaciales --------</p>
+<div class="" *ngFor="let star of selected_people.starships">
+  <a href="/nave/{{star.name}}">  {{star.name}}</a>
+</div>

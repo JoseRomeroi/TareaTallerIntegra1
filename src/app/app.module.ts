@@ -11,6 +11,7 @@ import { SearcherComponent } from './searcher/searcher.component';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import { FilterPipe } from './filter.pipe';
 import {MatInputModule} from '@angular/material/input';
+import { NaveComponent } from './nave/nave.component';
 
 
 @NgModule({
@@ -21,6 +22,7 @@ import {MatInputModule} from '@angular/material/input';
     PersonaComponent,
     SearcherComponent,
     FilterPipe,
+    NaveComponent,
   ],
   imports: [
     BrowserModule,

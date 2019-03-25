@@ -7,13 +7,15 @@
 <p>{{test}}</p>
 
 <p>{{test}}</p> -->
+<h1>Peliculas de Starwars</h1>
+<h6>Haga click en el nombre de la pelicula para ver mas información al respecto</h6>
 
 <div class="" *ngFor="let movie of movies">
   <!-- <a [routerLink]="['/pelicula/{{movie.url}}']">{{movie.title}}</a> -->
   <a href="/pelicula/{{movie.title}}"> {{movie.title}}</a>
-  <button type="button" name="boton_1">
+  <!-- <button type="button" name="boton_1">
     Ver + info
-  </button>
+  </button> -->
   <p>Fecha de lanzamiento:{{movie.release_date}}</p>
   <p>Director:{{movie.director}}</p>
   <p>Productores:{{movie.producer}}</p>
@@ -28,9 +30,17 @@
 <p>personas</p>
 <p>---------------------------- </p>
 
-<div class="" *ngFor="let p of people">
+<!-- <div class="" *ngFor="let p of people">
   <p>{{p.name}}</p>
   <p>{{p.mass}}</p>
-</div>
+</div> -->
   <!-- {{people[0].mass}} -->
   <!-- <a href="/persona/{{people[0].name}}"> {{people[0].name}}</a> -->
+
+  <div class="" *ngFor="let p of starships">
+    <p>{{p.name}}</p>
+  </div>
+<!-- 
+  <div class="" *ngFor="let star of starships">
+    <a href="/nave/{{star.name}}"> {{star.name}}</a>
+  </div> -->

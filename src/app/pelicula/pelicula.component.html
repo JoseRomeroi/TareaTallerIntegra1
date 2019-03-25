@@ -1,14 +1,15 @@
-<p>
-  pelicula works!
-</p>
 
+<h1>Nombre: {{selected_movie.title}}</h1>
+<p>Director: {{selected_movie.director}}</p>
+<p>Opening Crawl: {{selected_movie.opening_crawl}}</p>
+<p>Numero de episodio: {{selected_movie.episode_id}}</p>
+<p>Productor: {{selected_movie.producer}}</p>
+<p>Fecha de estreno: {{selected_movie.release_date}}</p>
+<p>Creada: {{selected_movie.created}}</p>
+<p>Editada: {{selected_movie.edited}}</p>
 
-
-<p>nombre: {{selected_movie.title}}</p>
-<p>director: {{selected_movie.director}}</p>
-<p>------ personajes--------</p>
+<p>--------Personajes--------</p>
 <div class="" *ngFor="let charact of selected_movie.characters">
-
   <a href="/persona/{{charact.name}}">  {{charact.name}}</a>
 </div>
 <p>------ planetas--------</p>
@@ -16,8 +17,7 @@
   {{planet.name}}
   <!-- <a href="/persona/charact.name">  {{charact.name}}</a> -->
 </div>
-<p>------ naves espacioales--------</p>
-<div class="" *ngFor="let naves of selected_movie.starships">
-  {{naves.name}}
-  <!-- <a href="/persona/charact.name">  {{charact.name}}</a> -->
+<p>------ naves espaciales--------</p>
+<div class="" *ngFor="let star of selected_movie.starships">
+  <a href="/nave/{{star.name}}">  {{star.name}}</a>
 </div>

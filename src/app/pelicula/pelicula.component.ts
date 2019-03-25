@@ -69,20 +69,17 @@ export class PeliculaComponent implements OnInit {
     }
   }
 
-  getFilms(nextLink){
-   return new Promise((resolve) => {
-     this.http.get(nextLink).subscribe((data:any)=> {
+  async getFilms(nextLink){
+       const data: any = await this.http.get(nextLink).toPromise();
        // console.log(data);
        for (let i = 0; i < data.results.length; i++) {
            this.movies.push(data.results[i]);
        }
        if(data.next){
-         this.getFilms(data.next);
+         await this.getFilms(data.next);
        } else {
          console.log(this.movies);
-         return resolve();
+         return this.movies;
        }
-     });
-   });
   }
 }
