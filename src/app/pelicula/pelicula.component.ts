@@ -15,11 +15,11 @@ export class PeliculaComponent implements OnInit {
   private http: HttpClient) { }
 
   ngOnInit() {
-    console.log(this.rutaActiva.snapshot.params.id);
+    // console.log(this.rutaActiva.snapshot.params.id);
     this.id = this.rutaActiva.snapshot.params.id;
     // this.id = 'The Phantom Menace';
     this.getFilms('https://swapi.co/api/films').then(() => {
-      console.log(this.findFilmName(this.id));
+      // console.log(this.findFilmName(this.id));
       this.selected_movie = this.findFilmName(this.id);
       this.getCharacters(this.selected_movie.characters);
       this.getStarships(this.selected_movie.starships);
@@ -33,9 +33,9 @@ export class PeliculaComponent implements OnInit {
     for (let i = 0; i < url.length; i++) {
       characters.push(await this.http.get(url[i]).toPromise());
     }
-    console.log(characters);
+    // console.log(characters);
     this.selected_movie.characters = characters;
-    console.log(this.selected_movie);
+    // console.log(this.selected_movie);
     return characters;
   }
 
@@ -44,9 +44,9 @@ export class PeliculaComponent implements OnInit {
     for (let i = 0; i < url.length; i++) {
       starships.push(await this.http.get(url[i]).toPromise());
     }
-    console.log(starships);
+    // console.log(starships);
     this.selected_movie.starships = starships;
-    console.log(this.selected_movie);
+    // console.log(this.selected_movie);
     return starships;
   }
 
@@ -55,9 +55,9 @@ export class PeliculaComponent implements OnInit {
     for (let i = 0; i < url.length; i++) {
       planets.push(await this.http.get(url[i]).toPromise());
     }
-    console.log(planets);
+    // console.log(planets);
     this.selected_movie.planets = planets;
-    console.log(this.selected_movie);
+    // console.log(this.selected_movie);
     return planets;
   }
 
@@ -78,7 +78,7 @@ export class PeliculaComponent implements OnInit {
        if(data.next){
          await this.getFilms(data.next);
        } else {
-         console.log(this.movies);
+         // console.log(this.movies);
          return this.movies;
        }
   }

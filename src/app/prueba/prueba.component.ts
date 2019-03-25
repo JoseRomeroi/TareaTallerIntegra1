@@ -24,7 +24,7 @@ export class PruebaComponent implements OnInit {
   getFilms(){
     this.http.get('https://swapi.co/api/films').subscribe((data:any)=> {
       this.movies = data.results;
-      console.log(this.movies)
+      // console.log(this.movies)
     });
   }
 
@@ -37,7 +37,7 @@ export class PruebaComponent implements OnInit {
     if(data.next){
       await this.getPlanets(data.next);
     } else {
-      console.log(this.planets);
+      // console.log(this.planets);
       return this.planets;
     }
   }
@@ -63,7 +63,7 @@ export class PruebaComponent implements OnInit {
     if(data.next){
       this.getStarships(data.next);
     } else {
-      console.log(this.starships);
+      // console.log(this.starships);
     }
   }
 

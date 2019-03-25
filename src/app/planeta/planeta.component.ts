@@ -17,7 +17,7 @@ export class PlanetaComponent implements OnInit {
   ngOnInit() {
     this.id = this.rutaActiva.snapshot.params.id;
     this.getPlanets('https://swapi.co/api/planets').then(()=>{
-      console.log(this.findPlanetName(this.id));
+      // console.log(this.findPlanetName(this.id));
       this.selected_planets = this.findPlanetName(this.id);
       this.getFilms(this.selected_planets.films);
       this.getCharacters(this.selected_planets.residents);
@@ -29,9 +29,9 @@ export class PlanetaComponent implements OnInit {
     for (let i = 0; i < url.length; i++) {
       characters.push(await this.http.get(url[i]).toPromise());
     }
-    console.log(characters);
+    // console.log(characters);
     this.selected_planets.residents = characters;
-    console.log(this.selected_planets);
+    // console.log(this.selected_planets);
     return characters;
   }
 
@@ -40,9 +40,9 @@ export class PlanetaComponent implements OnInit {
     for (let i = 0; i < url.length; i++) {
       films.push(await this.http.get(url[i]).toPromise());
     }
-    console.log(films);
+    // console.log(films);
     this.selected_planets.films = films;
-    console.log(this.selected_planets);
+    // console.log(this.selected_planets);
     return films;
   }
 

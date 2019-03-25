@@ -29,14 +29,14 @@ export class SearcherComponent implements OnInit {
       for (let i = 0; i < data.results.length; i++) {
         this.movies.push(data.results[i].title);
       }
-      console.log(this.movies);
+      // console.log(this.movies);
     });
   }
 
   setSearch(type) {
     if (type === 1 ){
       this.dataset = this.people;
-      console.log(this.dataset);
+      // console.log(this.dataset);
     }
     if (type === 2 ){
       this.dataset = this.starships;
@@ -57,7 +57,7 @@ export class SearcherComponent implements OnInit {
     if(data.next){
       await this.getPlanets(data.next);
     } else {
-      console.log(this.planets);
+      // console.log(this.planets);
       return this.planets;
     }
   }
@@ -70,7 +70,7 @@ export class SearcherComponent implements OnInit {
     if(data.next){
       await this.getPeople(data.next);
     } else {
-      console.log(this.people);
+      // console.log(this.people);
     }
   }
 
@@ -83,7 +83,7 @@ export class SearcherComponent implements OnInit {
     if(data.next){
       this.getStarships(data.next);
     } else {
-      console.log(this.starships);
+      // console.log(this.starships);
     }
   }
 }

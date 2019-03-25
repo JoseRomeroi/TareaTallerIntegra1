@@ -17,7 +17,7 @@ export class PersonaComponent implements OnInit {
   ngOnInit() {
     this.id = this.rutaActiva.snapshot.params.id;
     this.getPeople('https://swapi.co/api/people').then(()=>{
-      console.log(this.findPeopleName(this.id));
+      // console.log(this.findPeopleName(this.id));
       this.selected_people = this.findPeopleName(this.id);
       this.getFilms(this.selected_people.films);
       this.getStarships(this.selected_people.starships);
@@ -30,9 +30,9 @@ export class PersonaComponent implements OnInit {
     for (let i = 0; i < url.length; i++) {
       films.push(await this.http.get(url[i]).toPromise());
     }
-    console.log(films);
+    // console.log(films);
     this.selected_people.films = films;
-    console.log(this.selected_people);
+    // console.log(this.selected_people);
     return films;
   }
 
@@ -41,19 +41,19 @@ export class PersonaComponent implements OnInit {
     for (let i = 0; i < url.length; i++) {
       starships.push(await this.http.get(url[i]).toPromise());
     }
-    console.log(starships);
+    // console.log(starships);
     this.selected_people.starships = starships;
-    console.log(this.selected_people);
+    // console.log(this.selected_people);
     return starships;
   }
 
   async getPlanets(url: string){
-    console.log(url);
+    // console.log(url);
     const data: any = await this.http.get(url).toPromise();
     this.selected_people.homeworld = data.name;
-    console.log(data.name);
-    console.log(data.results);
-    console.log(this.selected_people);
+    // console.log(data.name);
+    // console.log(data.results);
+    // console.log(this.selected_people);
     return this.selected_people.homeworld;
   }
 
@@ -74,7 +74,7 @@ export class PersonaComponent implements OnInit {
     if(data.next){
       await this.getPeople(data.next);
     } else {
-      console.log(this.people);
+      // console.log(this.people);
       return this.people;
     }
   }

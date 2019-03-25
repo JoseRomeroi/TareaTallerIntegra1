@@ -9,7 +9,8 @@
 <p>Creado: {{selected_people.created}}</p>
 <p>Editado: {{selected_people.edited}}</p>
 
-<p>Planeta al que pertenece: {{selected_people.homeworld}}</p>
+<p>Planeta al que pertenece:</p>
+<a href="/planeta/{{selected_people.homeworld}}">  {{selected_people.homeworld}}</a>
 
 <p>----- Peliculas en las que aparece -----</p>
 <div class="" *ngFor="let fil of selected_people.films">

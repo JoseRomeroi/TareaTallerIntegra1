@@ -17,7 +17,7 @@ export class NaveComponent implements OnInit {
   ngOnInit() {
     this.id = this.rutaActiva.snapshot.params.id;
     this.getStarships('https://swapi.co/api/starships').then(()=>{
-      console.log(this.findStarshipsName(this.id));
+      // console.log(this.findStarshipsName(this.id));
       this.selected_starships = this.findStarshipsName(this.id);
       this.getFilms(this.selected_starships.films);
       this.getCharacters(this.selected_starships.pilots);
@@ -29,9 +29,9 @@ export class NaveComponent implements OnInit {
     for (let i = 0; i < url.length; i++) {
       characters.push(await this.http.get(url[i]).toPromise());
     }
-    console.log(characters);
+    // console.log(characters);
     this.selected_starships.pilots = characters;
-    console.log(this.selected_starships);
+    // console.log(this.selected_starships);
     return characters;
   }
 
@@ -40,9 +40,9 @@ export class NaveComponent implements OnInit {
     for (let i = 0; i < url.length; i++) {
       films.push(await this.http.get(url[i]).toPromise());
     }
-    console.log(films);
+    // console.log(films);
     this.selected_starships.films = films;
-    console.log(this.selected_starships);
+    // console.log(this.selected_starships);
     return films;
   }
 
@@ -54,7 +54,7 @@ export class NaveComponent implements OnInit {
     if(data.next){
       await this.getStarships(data.next);
     } else {
-      console.log(this.starships);
+      // console.log(this.starships);
       return this.starships;
     }
   }
