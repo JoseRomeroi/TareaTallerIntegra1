@@ -1,0 +1,21 @@
+<h1>Nombre: {{selected_planets.name}}</h1>
+<p>Clima: {{selected_planets.climate}}</p>
+<p>Diametro: {{selected_planets.diameter}}</p>
+<p>Gravedad: {{selected_planets.gravity}}</p>
+<p>Período de órbita: {{selected_planets.orbital_period}}</p>
+<p>Poblacion: {{selected_planets.population}}</p>
+<p>Periodo de rotacion: {{selected_planets.rotation_period}}</p>
+<p>Superficie de agua: {{selected_planets.surface_water}}</p>
+<p>Terreno: {{selected_planets.terrain}}</p>
+<p>Creado: {{selected_planets.created}}</p>
+<p>Editado: {{selected_planets.edited}}</p>
+
+<p>----- Peliculas en las que aparece -----</p>
+<div class="" *ngFor="let fil of selected_planets.films">
+  <a href="/pelicula/{{fil.title}}">  {{fil.title}}</a>
+</div>
+
+<p>--------Residentes--------</p>
+<div class="" *ngFor="let pil of selected_planets.residents">
+  <a href="/persona/{{pil.name}}">  {{pil.name}}</a>
+</div>

@@ -12,12 +12,11 @@
 <div class="" *ngFor="let charact of selected_movie.characters">
   <a href="/persona/{{charact.name}}">  {{charact.name}}</a>
 </div>
-<p>------ planetas--------</p>
+<p>--------Planetas--------</p>
 <div class="" *ngFor="let planet of selected_movie.planets">
-  {{planet.name}}
-  <!-- <a href="/persona/charact.name">  {{charact.name}}</a> -->
+  <a href="/planeta/{{planet.name}}">  {{planet.name}}</a>
 </div>
-<p>------ naves espaciales--------</p>
+<p>--------Naves espaciales--------</p>
 <div class="" *ngFor="let star of selected_movie.starships">
   <a href="/nave/{{star.name}}">  {{star.name}}</a>
 </div>

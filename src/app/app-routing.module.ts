@@ -4,6 +4,7 @@ import {PruebaComponent} from './prueba/prueba.component';
 import {PeliculaComponent} from './pelicula/pelicula.component';
 import {PersonaComponent} from './persona/persona.component';
 import { NaveComponent } from './nave/nave.component';
+import { PlanetaComponent } from './planeta/planeta.component';
 
 const routes: Routes = [
   {
@@ -23,6 +24,10 @@ const routes: Routes = [
     path: 'nave/:id',
     component: NaveComponent
   },
+  {
+    path: 'planeta/:id',
+    component: PlanetaComponent
+  }
 ];
 
 @NgModule({
